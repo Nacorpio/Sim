@@ -58,43 +58,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creature.cs" />
-    <Compile Include="DamageInfo.cs" />
-    <Compile Include="Entity.cs" />
-    <Compile Include="IAssembly.cs" />
-    <Compile Include="IBreakable.cs" />
-    <Compile Include="ICreature.cs" />
-    <Compile Include="ICreatureTemplate.cs" />
-    <Compile Include="IDamageable.cs" />
-    <Compile Include="IEntity.cs" />
-    <Compile Include="IFixable.cs" />
-    <Compile Include="IFluidContainer.cs" />
-    <Compile Include="IObject.cs" />
-    <Compile Include="IPart.cs" />
-    <Compile Include="IPartTemplate.cs" />
-    <Compile Include="ITemplate.cs" />
-    <Compile Include="IThing.cs" />
-    <Compile Include="IThingTemplate.cs" />
-    <Compile Include="IUnit.cs" />
-    <Compile Include="IUnitTemplate.cs" />
-    <Compile Include="IVehicle.cs" />
-    <Compile Include="IVehiclePart.cs" />
-    <Compile Include="IVehicleSeat.cs" />
-    <Compile Include="IVehicleTemplate.cs" />
-    <Compile Include="PartBase.cs" />
+    <Compile Include="Common\Objects\Creature.cs" />
+    <Compile Include="Common\Data\DamageInfo.cs" />
+    <Compile Include="Common\Objects\Entity.cs" />
+    <Compile Include="API\IAssembly.cs" />
+    <Compile Include="API\IBreakable.cs" />
+    <Compile Include="API\Objects\ICreature.cs" />
+    <Compile Include="API\Templates\ICreatureTemplate.cs" />
+    <Compile Include="API\IDamageable.cs" />
+    <Compile Include="API\Objects\IEntity.cs" />
+    <Compile Include="API\IFixable.cs" />
+    <Compile Include="API\IFluidContainer.cs" />
+    <Compile Include="API\Objects\IObject.cs" />
+    <Compile Include="API\Objects\IPart.cs" />
+    <Compile Include="API\Templates\IPartTemplate.cs" />
+    <Compile Include="API\Templates\ITemplate.cs" />
+    <Compile Include="API\Objects\IThing.cs" />
+    <Compile Include="API\Templates\IThingTemplate.cs" />
+    <Compile Include="API\Objects\IUnit.cs" />
+    <Compile Include="API\Templates\IUnitTemplate.cs" />
+    <Compile Include="API\Objects\IVehicle.cs" />
+    <Compile Include="API\Objects\IVehiclePart.cs" />
+    <Compile Include="API\Objects\IVehicleSeat.cs" />
+    <Compile Include="API\Templates\IVehicleTemplate.cs" />
+    <Compile Include="Common\Objects\PartBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Thing.cs" />
-    <Compile Include="Unit.cs" />
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="VehiclePartCollection.cs" />
-    <Compile Include="VehicleSeat.cs" />
-    <Compile Include="VehicleSeatCollection.cs" />
-    <Compile Include="VehicleSeatKind.cs" />
+    <Compile Include="Common\Objects\Thing.cs" />
+    <Compile Include="Common\Objects\Unit.cs" />
+    <Compile Include="Common\Objects\Vehicle.cs" />
+    <Compile Include="Common\Collections\VehiclePartCollection.cs" />
+    <Compile Include="Common\Objects\VehicleSeat.cs" />
+    <Compile Include="Common\Collections\VehicleSeatCollection.cs" />
+    <Compile Include="API\VehicleSeatKind.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
