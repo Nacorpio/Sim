@@ -58,12 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Objects\Creature.cs" />
+    <Compile Include="Common\Objects\Organism.cs" />
     <Compile Include="Common\Data\DamageInfo.cs" />
     <Compile Include="Common\Objects\Entity.cs" />
     <Compile Include="API\IAssembly.cs" />
     <Compile Include="API\IBreakable.cs" />
-    <Compile Include="API\Objects\ICreature.cs" />
+    <Compile Include="API\Objects\IOrganism.cs" />
     <Compile Include="API\Templates\ICreatureTemplate.cs" />
     <Compile Include="API\IDamageable.cs" />
     <Compile Include="API\Objects\IEntity.cs" />
