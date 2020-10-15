@@ -24,6 +24,11 @@ namespace Sim.API.Objects
     /// </summary>
     event EventHandler Healed;
 
+    /// <summary>
+    /// Raised when the organism has died.
+    /// </summary>
+    event EventHandler Died;
+
 
     /// <summary>
     /// Gets the last attacker of the organism.
@@ -71,6 +76,12 @@ namespace Sim.API.Objects
     /// <param name="healer">The healer.</param>
     /// <param name="amount">The healing amount (hp).</param>
     void Heal([NotNull] IOrganism healer, int amount);
+
+
+    /// <summary>
+    /// Makes the organism die.
+    /// </summary>
+    void Die();
   }
 
 }

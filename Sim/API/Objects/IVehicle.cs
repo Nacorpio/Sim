@@ -32,6 +32,13 @@ namespace Sim.API.Objects
     /// </summary>
     /// <returns>The passenger seats in the vehicle.</returns>
     IEnumerable <IVehicleSeat> GetPassengerSeats();
+
+    /// <summary>
+    /// Returns a value indicating whether a seat of the specified kind is free.
+    /// </summary>
+    /// <param name="kind">The kind of the seat.</param>
+    /// <returns><c>true</c> if a free seat was found; otherwise, <c>false</c>.</returns>
+    bool IsSeatFree(VehicleSeatKind kind);
   }
 
 }

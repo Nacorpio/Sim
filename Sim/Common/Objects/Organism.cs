@@ -27,6 +27,10 @@ namespace Sim.Common.Objects
     /// </summary>
     public event EventHandler Healed;
 
+    /// <summary>
+    /// Raised when the <see cref="Organism"/> has died.
+    /// </summary>
+    public event EventHandler Died;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Organism"/> class, specifying its unique instance identifier and template.
@@ -118,6 +122,11 @@ namespace Sim.Common.Objects
     /// <param name="amount">The healing amount (hp).</param>
     public void Heal(IOrganism healer, int amount)
     {
+      if (IsDead)
+      {
+        return;
+      }
+
       if (Health + amount > Template.MaxHealth)
       {
         SetHealth(Template.MaxHealth);
@@ -126,6 +135,20 @@ namespace Sim.Common.Objects
 
       SetHealth(Health + amount);
       OnHealed();
+    }
+
+    /// <summary>
+    /// Makes the <see cref="Organism"/> die.
+    /// </summary>
+    public void Die()
+    {
+      if (IsDead)
+      {
+        return;
+      }
+
+      IsAlive = false;
+      OnDied();
     }
 
     protected virtual void OnRevived()
@@ -141,6 +164,11 @@ namespace Sim.Common.Objects
     protected virtual void OnHealed()
     {
       Healed?.Invoke(this, EventArgs.Empty);
+    }
+
+    protected virtual void OnDied()
+    {
+      Died?.Invoke(this, EventArgs.Empty);
     }
   }
 

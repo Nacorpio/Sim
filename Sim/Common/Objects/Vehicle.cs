@@ -107,6 +107,15 @@ namespace Sim.Common.Objects
       return true;
     }
 
+    /// <summary>
+    /// Returns a value indicating whether a <see cref="VehicleSeat"/> of the specified kind is free.
+    /// </summary>
+    /// <param name="kind">The kind of the seat.</param>
+    /// <returns><c>true</c> if a free seat was found; otherwise, <c>false</c>.</returns>
+    public bool IsSeatFree(VehicleSeatKind kind)
+    {
+      return _seats.Any(x => x.Kind.Equals(kind) && x.IsEmpty);
+    }
 
     /// <summary>
     /// Returns the driver seat of the <see cref="Vehicle"/>.
@@ -117,11 +126,15 @@ namespace Sim.Common.Objects
       return _seats.FirstOrDefault(x => x.Kind.Equals(VehicleSeatKind.Driver));
     }
 
-
+    /// <summary>
+    /// Returns a collection of the passenger seats in the <see cref="Vehicle"/>.
+    /// </summary>
+    /// <returns>The passenger seats in the vehicle.</returns>
     public IEnumerable<IVehicleSeat> GetPassengerSeats()
     {
       return _seats.Where(x => x.Kind.Equals(VehicleSeatKind.Passenger));
     }
+
 
     protected virtual void OnPartInstalled()
     {
