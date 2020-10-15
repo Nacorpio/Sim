@@ -1,4 +1,4 @@
-﻿namespace Sim
+﻿namespace Sim.API.Objects
 {
 
   public interface IVehiclePart : IPart

@@ -5,7 +5,7 @@ using UnitsNet;
 namespace Sim.API.Templates
 {
 
-  public interface IVehicleTemplate : IThingTemplate
+  public interface IVehicleTemplate : IUnitTemplate
   {
     [JsonProperty("model", Order = 3)]
     string Model { get; }

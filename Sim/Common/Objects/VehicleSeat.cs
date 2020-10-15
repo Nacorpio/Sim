@@ -1,4 +1,7 @@
-﻿namespace Sim
+﻿using Sim.API;
+using Sim.API.Objects;
+
+namespace Sim.Common.Objects
 {
 
   public class VehicleSeat : PartBase, IVehicleSeat

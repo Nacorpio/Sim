@@ -77,6 +77,8 @@ namespace Sim.Common.Objects
     {
       SetHealth(Health - damageInfo.HealthValue);
       OnHealthValueChanged();
+
+      return Health;
     }
 
 
